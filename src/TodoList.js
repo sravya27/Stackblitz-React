@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 const TodoList = () => {
   const [todoItems, setTodoItems] = useState([]);
-  const [inv, setInv] = useState("");  // ✅ Ensure text is initialized as an empty string
+  const [text, setText] = useState("");  // ✅ Ensure text is initialized as an empty string
 
   const addItem = () => {
     if (text.trim() === "") return;  // Prevent adding empty items
-    setTodoItems([...todoItems, { inv, completed: false }]);
+    setTodoItems([...todoItems, { text, completed: false }]);
     setText("");  // Clear input field after adding
   };
 
@@ -20,7 +20,7 @@ const TodoList = () => {
     <div>
       <input
         type="text"
-        value={inv}
+        value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => handleKeyDown(e)}
         placeholder="Enter a task..."  // ✅ Placeholder should now be visible
