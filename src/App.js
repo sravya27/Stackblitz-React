@@ -1,11 +1,13 @@
 import React from 'react';
-import './style.css';
 import { HashRouter as Router, Route, Routes, NavLink } from "react-router-dom";
+import './style.css';
+import "./Navbar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TodoList from './TodoList';
 import DataFetch from './DataFetch';
 import TabsComponent from './TabsComponent';
 import ModalComponent from './ModalComponent';
-import "./Navbar.css";
+import CarouselComponent from './CarouselComponent';
 
 export default function App() {
 
@@ -19,7 +21,7 @@ export default function App() {
             TodoList
           </NavLink>
           <NavLink to="/tabs" className={({ isActive }) => (isActive ? "active" : "")}>
-            Tabs
+            Carousel
           </NavLink>
           <NavLink to="/api" className={({ isActive }) => (isActive ? "active" : "")}>
             Api
@@ -31,7 +33,7 @@ export default function App() {
         <br />
         <Routes>
           <Route path="/" element={<TodoList />} />
-          <Route path="/tabs" element={<TabsComponent />} />
+          <Route path="/tabs" element={<CarouselComponent />} />
           <Route path="/api" element={<DataFetch />} />
           <Route path="/modal" element={<ModalComponent />} />
         </Routes>

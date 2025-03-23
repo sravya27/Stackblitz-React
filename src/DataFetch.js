@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './style.css';
 
 export default function DataFetch() {
     const [loading, setLoading] = useState(true);
@@ -22,9 +23,13 @@ export default function DataFetch() {
                 <div>
                 {data.map((item,index)=> (
                     <div key={index}>
-                        {item.title}
-                        <p>Description: {item.description}</p>
+                        <h5>{item.title}</h5>
+                        <h6>
+                            <h5 className="description">Description:</h5> 
+                            <p>{item.description}</p>
+                        </h6>
                         <ul>
+                            <h5 className="ingredients">Ingredients:</h5>
                             {item.ingredients.map((ing, j)=>(
                                 <li key={j}>
                                     {ing}

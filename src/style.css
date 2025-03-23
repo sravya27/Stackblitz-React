@@ -10,3 +10,11 @@ p {
   color: white;
   border: none;
 }
+
+.description {
+  color: rgb(151, 22, 29);
+}
+
+.ingredients  {
+  color: rgb(240, 160, 0);
+}
