@@ -8,6 +8,7 @@ import DataFetch from './DataFetch';
 import TabsComponent from './TabsComponent';
 import ModalComponent from './ModalComponent';
 import CarouselComponent from './CarouselComponent';
+import StarRating from './StarRating';
 
 export default function App() {
 
@@ -35,7 +36,7 @@ export default function App() {
           <Route path="/" element={<TodoList />} />
           <Route path="/tabs" element={<CarouselComponent />} />
           <Route path="/api" element={<DataFetch />} />
-          <Route path="/modal" element={<ModalComponent />} />
+          <Route path="/modal" element={<StarRating />} />
         </Routes>
       </Router>
     </div>
