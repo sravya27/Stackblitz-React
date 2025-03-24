@@ -25,7 +25,7 @@ const StarRating = () => {
   return (
     <div>
       <h1>Star Rating</h1>
-      <StarRating />
+      <Star />
     </div>
   );
 };
